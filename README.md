@@ -6,13 +6,13 @@
 This project illustrates using the AWS CDK v2 to provide multiple isolated stacks / environments in one account. While this deployment and or development style 
 is uncommon, and AWS recommends that each developer have a sandbox as an answer to this deployment style, there are cases where a developer may want to spin up the entire or partial environment in parallel to another developers instance within one AWS account. This could be the established deployment style for a team using Kubernetes, and they wish to extend that deployment style to AWS resources.
 
-## Traditional Deployment Style
+### Traditional Deployment Style
 * Sandbox
 * Development
 * Staging / QA
 * Production
 
-## Namespace based Deployment Style
+### Namespace based Deployment Style
 * Sandbox
 * Development
     * kettle-camp
@@ -39,7 +39,7 @@ Before continuing, ensure you have met the following requirements:
 This Stack requires two environment variables
  * APPLICATION_NAME
  * NAMESPACE
- 
+
 These can be passed in from the command line, set for the current user or machine, provided during the CICD process or using a **.env** file (for local only). The **cdk.json** file has been changed to support **dotenv** using the _-r_ nodejs option.
 
 > "app": "npx ts-node **-r dotenv/config** --prefer-ts-exts bin/aws-cdk-namespace-deployment.ts"
