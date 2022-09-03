@@ -39,6 +39,7 @@ Before continuing, ensure you have met the following requirements:
 This Stack requires two environment variables
  * APPLICATION_NAME
  * NAMESPACE
+ 
 These can be passed in from the command line, set for the current user or machine, provided during the CICD process or using a **.env** file (for local only). The **cdk.json** file has been changed to support **dotenv** using the _-r_ nodejs option.
 
 > "app": "npx ts-node **-r dotenv/config** --prefer-ts-exts bin/aws-cdk-namespace-deployment.ts"
